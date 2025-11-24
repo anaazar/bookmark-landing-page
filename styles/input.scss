@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+body {
+  font-family: 'Rubik', sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #f5f7fa;
+}
+/* Mobile-first styles */
+
+/* navbar base */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+}
+
+/* logo */
+.logo-bookmark img {
+  height: 28px;
+}
+
+/* HAMBURGER visible en móvil */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 40;
+
+  span {
+    display: block;
+    height: 3px;
+    border-radius: 2px;
+    background: #242a45;
+    transition: transform .25s ease, opacity .25s ease;
+  }
+
+  &.active {
+    span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    span:nth-child(2) { opacity: 0; }
+    span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+  }
+}
+
+/* NAV LINKS - cerrado por defecto en móvil */
+.nav-links {
+  position: absolute;
+  top: 70px;
+  right: 18px;
+  width: 220px;
+  background: #fff;
+  padding: 18px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity .25s ease, transform .25s ease;
+  z-index: 30;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #242a45;
+  font-weight: 500;
+  display: block;
+}
+
+/* botón de login dentro del menú */
+.button-nav {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.button-nav a {
+  color: #fa5959;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* Cuando se abre */
+.nav-links.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+/* ---------- DESKTOP (cuando la visualizacion es pc) ---------- */
+@media (min-width: 800px) {
+  .hamburger {
+    display: none; /* oculto en desktop */
+  }
+.navbar {
+  display: flex;
+  justify-content: space-around; // espacio entre logo y hamburguesa
+  align-items: center;
+  padding: 18px;
+}
+
+  .nav-links { 
+    position: static;
+    display: flex;
+    flex-direction: row;
+    background: none;
+    padding: 0;
+    gap: 28px;
+    box-shadow: none;
+    transform: none;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-links li {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.image-container {
+  position: relative; // necesario para que los hijos con position absolute se superpongan
+  margin-top: 20%;
+  width: 100%;
+  margin-top: 20%;
+
+  .large {
+    width: 120%; // que sobresalga
+    max-width: 500px; // opcional para desktop
+    height: auto;
+    display: block;
+  }
+
+  .small {
+    position: absolute; // para superponer
+    top: -10%; // distancia desde arriba (ajusta según diseño)
+    left: 50%; // distancia desde la izquierda
+    transform: translateX(-50%); // centra la imagen sobre ese punto
+    width: 90%; // tamaño relativo a la pantalla
+    max-width: 420px; // opcional para desktop
+  }
+}
+
+
+
+
+.text-asimple { 
+
+  margin-top: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+} 
+.text-asimple h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.text-asimple p {
+  margin-top: 16px;
+  font-size: 1rem;
+  line-height: 1.5;       
+  gap: 24px;
+  opacity: 50%;}
+
+
+.buttons-Asimple {
+  margin-top: 24px;
+  display: flex;
+  gap: 16px;
+}
+.btn-chrome , .btn-firefox , .btn-more-info , .add-button  {
+  background-color: #5368df;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-contact-us {
+    background-color: #fa5959;
+    color: white;
+    border: none;
+    padding: 12px 94px;
+    border-radius: 5px; 
+    cursor: pointer;
+  }
+
+  .contact {
+    width: 100%;
+    margin-top: 48px;
+    text-align: center;
+    font-size: 0.875rem;
+    background-color: #5368df;
+  }
+
+  #Features {
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+padding: 3 rem 1.5rem;}
+
+.Features {
+  max-width: 350px;
+  margin: 2.5rem;
+  h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #242A45;
+  margin-bottom: 1rem;
+  }
+  }
+   p {
+  margin-top: 16px;
+  font-size: 1rem;
+  line-height: 1.5;       
+  gap: 24px;
+  opacity: 50%;}
+    
+ 
+  .features-options {
+    margin-top: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+
+button {
+      background: none;
+      border: none;
+      padding: 1rem 0;
+      font-size: 1rem;
+      font-weight: 500;
+      color: #242A45;
+      border-bottom: 1px solid #E0E3EB;
+      cursor: pointer;
+    }
+  }
+ .bookmark-image {
+  position: relative;    
+  margin-top: 50%;
+  width: 100%;
+  margin-top: 20%;
+
+
+  .large2 {
+    width: 120%; // que sobresalga
+    max-width: 500px; // opcional para desktop
+    height: auto;
+    display: block;
+    margin-left: -20%
+  }
+  .small2 {
+    position: absolute; // para superponer
+    margin-left: 5%;
+    top: -18%; // distancia desde arriba (ajusta según diseño)
+    left: 2%; // distancia desde la izquierda
+    transform: none; // centra la imagen sobre ese punto
+    width: 110%; // tamaño relativo a la pantalla
+    max-width: 420px; // opcional para desktop
+  }
+ }
+
+ .bookmark-text {
+  margin-top: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+.DownloadTheExtension { 
+  margin-top: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  .card-chrome , .card-firefox , .card-opera  {
+    background-color: #fff;
+    border: none;
+    padding: 24px;
+    border-radius: 5px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    cursor: pointer;
+    margin-top: 24px;
+  } 
+}
+
+.FAQ {
+  margin-top: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+.faq-details {
+  width: 100%;
+  margin-top: 24px;
+  max-width: 350px;
+  
+  details {
+padding: 1rem 0;  }
+  summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 220;
+    cursor: pointer;
+    list-style: none;
+    
+  }}
+  .contact {
+    p {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+      color: white;  
+      margin-top: 16px;
+      font-size: 1rem;
+      line-height: 1.5;
+      gap: 100%;
+
+    }
+  }
+
+  .footer  {
+    color: white;
+    background-color: #242A45;
+    list-style: none;
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   .footer-links {
+    list-style: none;
+    color: white
+   }
+   .social {
+      display: flex;
+      flex-direction: column;
+      margin-top: 16px;
+      margin-bottom: 16px;
+      a {
+        margin: 0 8px;
+        img {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+  }

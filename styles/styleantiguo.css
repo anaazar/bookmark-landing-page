@@ -37,28 +37,32 @@ body {
 
 .button-nav {
   padding: 10px 20px;
-  background-color: #ffffff;
-  color: rgb(236, 6, 6);
+  background-color:rgb(250, 249, 249);
+  color: white;
   border: 1px solid rgb(226, 8, 8);
   border-radius: 5px;
   cursor: pointer;
 }   
 
+
 .ASimple {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 80px 10%;
+  padding: 50px 10%;
   gap: 40px;
 }
 
 /* columna izquierda (texto) */
 .text-asimple {
   flex: 1;
+  max-width: 40%;
+
 }
 
 .text-asimple h2 {
   font-size: 2.5rem;
+  margin-bottom: 1rem;
   color: #242A45;
 }
 
@@ -66,6 +70,22 @@ body {
   color: #9194A1;
   margin: 20px 0;
   line-height: 1.6;
+}
+.image-container {
+position: relative;
+flex: 1;
+display: flex;
+  justify-content: center;
+  /* align-items: center;
+  margin-top: 20px; */
+}
+.large-rectangle-image img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index:1;
+  width: 80%;
+  
 }
 
 /* botones */
@@ -94,12 +114,20 @@ body {
   font-weight: 500;
 }
 
-
+.large-rectangle-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}   
 .aSimpleImage {
   flex: 1;
   display: flex;
   justify-content: flex-end;
 }
+
+  
+
 
 .aSimpleImage img {
   width: 100%;
@@ -310,4 +338,120 @@ body {
     cursor: pointer;
     font-weight: 500;
     margin-top: 30px;
+}
+.contact {
+    text-align: center;
+    padding: 50px 10%;
+    background-color: #5368DF;
+    
+}
+.contact h2 {
+    font-size: 2rem;
+    color: #fafafa;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact p {
+    color: #ffffff;
+    max-width: 400px;
+    margin: 50px auto 50px;
+    line-height: 1.6;
+}   
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #242A45;
+    padding: 20px 5%;
+    color: #ffffff;
+    
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;          
+  gap: 10px;
+}
+.footer-links a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+}
+.logo-footer {
+  height: 30px;
+}
+.footer-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 300;
+  transition: color 0.3s ease;
+}
+
+#contact {
+  letter-spacing: 3px;
+}
+
+.contact-us {
+  padding: 10px 20px;
+  background-color: white;
+  color: red;
+  font-weight: bold;
+  border: 1px solid rgb(226, 8, 8);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+
+.footer-links a:hover {
+  color: #9194A1;
+}
+
+.formulario-input-error {
+    border: 2px solid red;
+    display: none;
+
+}
+
+.formulario-input-error-activo {
+    display: block;
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+.formulario-incorrecto {
+    border: 2px solid red;
+    color: red
+}
+
+@media (max-width: 720px) {
+  .ASimple {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .aSimpleImage {
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  .bookmark-image {
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  .contenedor {
+    flex-direction: column;
+    align-items: center;
+  }
 }

@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bookmark</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="./styles/styleantiguo.css" rel="stylesheet" type="text/css" />
+    <!-- <script src="./script.js" ></script> -->
+
     
 </head>
 <body>
@@ -12,7 +14,12 @@
     <div class="logo-bookmark">
     <img src="./starter-code/images/logo-bookmark.svg" alt="Bookmark Logo" />
   </div>
-        <ul class="nav-links">
+  <div class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false" role="button" tabindex="0">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+        <ul class="nav-links" id="navLinks">
             <li><a href="#Bookmark">Bookmark</a></li>
             <li><a href="#features">Features</a></li>
             <li><a href="#pricing">Pricing</a></li>
@@ -23,6 +30,11 @@
 
     <main>
         <section class="ASimple" id="AsimpleBookmarkManager">
+    <div class="image-container">
+            <img class= "large" src="./starter-code/images/Large Rectangle.svg"    alt="large rectangle image" />
+            <img class="small" src="./starter-code/images/illustration-features-tab-1.svg" alt="bookmarks illustration-features-tab1" />
+        </div>
+
         <div class="text-asimple">
             <h2>A Simple Bookmark Manager</h2>
             <p>A clean and simple interface to organize your favorite websites. Open a new broswer tab and see your sites load instantly. Try it for me.</p>
@@ -31,9 +43,8 @@
         <button class="btn-chrome">Get it on Chrome</button> <button class="btn-firefox">Get it on Firefox</button>
             </div>
         </div>
-
-        <div class="aSimpleImage">
-            <img src="./starter-code/images/illustration-features-tab-1.svg" alt="bookmarks illustration-features-tab1" />
+        
+    
         </div>
         </section>
 
@@ -49,16 +60,17 @@
 
         <section id="BookmarkInOneClick">
             <div class="bookmark-image">
-            <img src="./starter-code/images/illustration-features-tab-1.svg" alt="Bookmark in one click illustration" />
+            <img class="large2" src="./starter-code/images/large-rectangle-2.png" alt="Bookmark in one click illustration" />
+            <img class="small2" src="./starter-code/images/illustration-features-tab-2.svg" alt="Bookmark in one click illustration" />
             </div>
             <div class="bookmark-text">
             <h2>Bookmark In One Click</h2>
             <p>Organize your bookmarks however your like. Our simple drag-and-drop interface gives you complete control over how you manage your favorite sites.</p>
-            <button class="bookmark-button">More Info</button>
+            <button id="buttons" class="btn-more-info">More Info</button>
         </div>
          </section>
 
-        <section id="DownloadTheExtension">
+        <section id="download-the-extension" class="DownloadTheExtension">
             <h2>Download The Extension</h2>
             <p>We've got more browsers in the pipeline. Please let us know if you've got a favourite you'd like us to prioritize.</p>
           
@@ -68,21 +80,21 @@
             <img src="./starter-code/images/logo-chrome.svg" alt="Chrome logo" />
             <h3>Add to Chrome</h3>
             <p>Minimum version 62</p>
-            <button class="add-button">Add to Chrome</button>
+            <button id="buttons"  class="add-button">Add and install extension </button>
             </div>
 
             <div class="card-firefox">
             <img src="./starter-code/images/logo-firefox.svg" alt="Firefox logo" />
-            <h3>Add to Firefox</h3>
+            <h3>Add and install extension </h3>
             <p>Minimum version 55</p>
-            <button class="add-button">Add to Firefox</button>
+            <button id="buttons" class="add-button">Add and install extension </button>
             </div>
 
             <div class="card-opera">
             <img src="./starter-code/images/logo-opera.svg" alt="Opera logo" />
-            <h3>Add to Opera</h3>
+            <h3>Add and install extension </h3>
             <p>Minimum version 46</p>
-            <button class="add-button">Add to Opera</button>
+            <button id="buttons" class="add-button">Add and install extension </button>
             </div>
           
               </section>
@@ -94,39 +106,77 @@
             <h2>Frequently Asked Questions</h2>
             <p>Here are some of our FAQs. If you have any other questions you'd like answered please feel free to email us.</p>
            <hr class="hr-faq"></hr>
-            <div class="faq-questions">
-                <h4>What is Bookmark?</h4>
+
+  
+
+            <div class="faq-details">
+                <details> 
+                    <summary> What is Bookmark? 
+                    <img src="./starter-code/images/icon-arrow.svg" alt="arrow icon" />
+                    </summary>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus faucibus orci quis lacinia. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam tincidunt erat quis lorem tincidunt tempor. Proin sed dui augue. Aliquam turpis ipsum, venenatis vitae diam ut.</p> </details>
                 <hr class="hr-faq"></hr>
-                <h4>How can I request a new browser?</h4>
+
+                <details>
+                     <summary> How can I request a new browser? 
+                        <img src="./starter-code/images/icon-arrow.svg" alt="arrow icon" />
+                    </summary> 
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus faucibus orci quis lacinia. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam tincidunt erat quis lorem tincidunt tempor. Proin sed dui augue. Aliquam turpis ipsum, venenatis vitae diam ut.</p> </details>
                 <hr class="hr-faq"></hr>
-                <h4>Is there a mobile app?</h4>
+
+                <details> <summary> Is there a mobile app? 
+                    <img src="./starter-code/images/icon-arrow.svg" alt="arrow icon" />
+                </summary> 
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus faucibus orci quis lacinia. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam tincidunt erat quis lorem tincidunt tempor. Proin sed dui augue. Aliquam turpis ipsum, venenatis vitae diam ut.</p> </details>
                 <hr class="hr-faq"></hr>
-                <h4>What about other Chromium browsers?</h4>
+
+                <details> <summary> What about other Chromium browsers?
+                    <img src="./starter-code/images/icon-arrow.svg" alt="arrow icon" />
+
+                </summary>
+                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus faucibus orci quis lacinia. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam tincidunt erat quis lorem tincidunt tempor. Proin sed dui augue. Aliquam turpis ipsum, venenatis vitae diam ut.</p> </details>
                 <hr class="hr-faq"></hr>
+                
             </div>
 
-            <button class="more-info-button">More Info</button>
+            <button id="buttons" class="btn-more-info">More Info</button>
         </section>
-        <section id="Login">
+
+ 
+        <section id="contact">
+        <div class="contact ">
         <p>35.000+ ALREDY JOINED</p>
-            <h2>Stay up-to-date with what we're doing</h2>
+        <h2><span>Stay up-to-date with the latest news and offers</span></h2>
 
+<form action = " "id="contact-form" class= contact-form> 
+    <div class="formulario_grupo" id="formulario_grupo"> <label class="formulario_grupo">  </label>  <input type="email" id="correo" name="correo" placeholder="example@email.com"> 
+        <p class="formulario-input-error"> Whoops! Make sure its an email </p>
+   
+        <button id="buttons" class="btn-contact-us">Contact Us</button> </div>
+</form>
 
-
-            <form>
-                <label for="correo">Email:</label>
-                <input type="email" id="correo" name="correo">  <input type="ContactUs" value="Contact Us">
-            </form>
+        </div>
         </section>
-</body>
 </main>
 
-<footer>
-   <ul>
+<footer class="footer">
+    <div class="logo-footer">
+        <img src="./starter-code/images/logo-bookmark.svg" alt="Bookmark Logo" />
+        <span>BOOKMARK</span>
+    </div>
+   <ul class="footer-links">
             <li><a href="#features">Features</a></li>
             <li><a href="#pricing">Pricing</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+        <div class="social">
+                <a href="#"><img src="/img/icon-facebook.svg" alt="Facebook"></a>
+                <a href="#"><img src="/img/icon-twitter.svg" alt="Twitter"></a>
+            </div>
 </footer>
+    <script src="./script.js" defer></script>
+
+</body>
 
 </html>
