@@ -6,11 +6,9 @@ body {
   box-sizing: border-box;
   background-color: #f5f7fa;
 }
-
-/* Mobile-first styles */
-/* navbar base */
 .navbar {
   display: flex;
+  margin: 4rem;
   justify-content: space-between;
   align-items: center;
   padding: 8px;
@@ -96,7 +94,7 @@ body {
   transform: translateY(0);
 }
 
-/* ---------- DESKTOP (cuando la visualizacion es pc) ---------- */
+/* ---------- DESKTOP ---------- */
 @media (min-width: 800px) {
   .hamburger {
     display: none; /* oculto en desktop */
